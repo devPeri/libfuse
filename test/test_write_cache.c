@@ -259,7 +259,7 @@ int main(int argc, char *argv[]) {
     /* Start file-system thread */
     assert(pthread_create(&fs_thread, NULL, run_fs, (void *)se) == 0);
   
-    safe_sleep(1);
+    sleep(1);
     
     /* Write test data */
     test_fs(fuse_opts.mountpoint);
