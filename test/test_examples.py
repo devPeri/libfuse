@@ -486,6 +486,8 @@ def test_release_unlink_race(tmpdir, output_checker):
         os.close(fuse_temp_file)
         os.unlink(fuse_temp_file_path)
 
+        safe_sleep(3)
+        
         assert os.listdir(temp_dir_path) == []
     
     except:
